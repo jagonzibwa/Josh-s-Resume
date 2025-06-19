@@ -1,70 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joshua Agonzibwa - Resume</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joshua Agonzibwa | Resume</title>
+  <link rel="stylesheet" href="style.css">
+</script>
+
+
+</script>
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <h1 class="logo">Joshua Agonzibwa</h1>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Joshua Agonzibwa</h1>
+    <p>Leader • Technologist • Musician</p>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm Joshua, a passionate developer and creative leader who combines tech and music to drive positive change.</p>
-    </section>
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section id="skills">
+  <div class="container">
+    <section id="skills" class="skills">
       <h2>Skills</h2>
       <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Responsive Design</li>
-        <li>Leadership and Public Speaking</li>
-        <li>Creative Direction & Music Production</li>
+        <li>Bass Guitar</li>
+        <li>Acoustic Guitar</li>
+        <li>Cello</li>
+        <li>Git & GitHub</li>
+        <li>Critical Thinking</li>
+        <li>Project Management & Leadership</li>
       </ul>
     </section>
 
-    <section id="experience">
-      <h2>Work Experience</h2>
-      <article>
-        <p>2025 - Present</p>
-
-      </article>
+    <section id="experience" class="experience">
+      <h2>Experience</h2>
+      <li>Participated in the Uganda National Students Convention in Uganda, 2023</li>
+      <li>Participated in the International Students Convention in the United States, 2024</li>
+    </ul>
     </section>
 
-
-    <section id="education">
+    <section id="education" class="education">
       <h2>Education</h2>
-      <p>Bachelor in Software Engineering - African Leadership University; 2024 - present</p>
+      <li>Vine International Christian Academy, 2011</li>
+      <li>Orchard International Christian School, 2012-2023</li>
+      <li>African Leadership University, 2024-Present</li>
+    </ul>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Inititive to add accessibility to public transport in Uganda for the disabled</li>
+      </ul>
     </section>
 
     <section id="contact">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" placeholder="Your Message" required></textarea>
+      <h2>Contact</h2>
+      <form onsubmit="return validateForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
         <button type="submit">Send</button>
       </form>
     </section>
-  </main>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Joshua Agonzibwa. All rights reserved.</p>
-  </footer>
+
+
+  <script src="script.js"></script>
 </body>
-</html
+</html>

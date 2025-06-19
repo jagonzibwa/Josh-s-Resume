@@ -1,24 +1,26 @@
-// Responsive navbar toggle
-const toggleButton = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById("myForm");
 
-toggleButton.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
 
-// Form validation
-const form = document.getElementById('contact-form');
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-form.addEventListener('submit', (e) => {
-  const name = document.getElementById('name');
-  const email = document.getElementById('email');
-  const message = document.getElementById('message');
+    // Validation
+    if (!name || !email || !message) {
+      alert("All fields are required!");
+      return;
+    }
 
-  if (!name.value || !email.value || !message.value) {
-    alert('Please fill in all fields.');
-    e.preventDefault();
-  } else if (!email.value.includes('@')) {
-    alert('Please enter a valid email.');
-    e.preventDefault();
-  }
+    if (!email.includes("@") || !email.includes(".")) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Success message
+    alert(`Thank you for reaching out, ${name}!`);
+    form.reset(); // Optionally clear the form
+  });
 });
